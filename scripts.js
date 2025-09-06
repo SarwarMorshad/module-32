@@ -16,11 +16,25 @@ document.getElementById("btn-load-post").addEventListener("click", function () {
     .then((data) => displayPost(data));
 });
 
+// const displayPost = (posts) => {
+//   const postsContainer = document.getElementById("post-container");
+//   postsContainer.innerHTML = ""; // Clear previous posts
+//   posts.forEach((post) => {
+//     const li = document.createElement("li");
+//     li.textContent = post.title;
+//     postsContainer.appendChild(li);
+//   });
+// };
+
 const displayPost = (posts) => {
   const postsContainer = document.getElementById("post-container");
+  postsContainer.innerHTML = "";
   posts.forEach((post) => {
-    const li = document.createElement("li");
-    li.textContent = post.title;
-    postsContainer.appendChild(li);
+    const postCard = document.createElement("div");
+    postCard.innerHTML = `<div class="post-card">
+        <h2>${post.title}</h2>
+        <p>${post.body}</p>
+      </div>`;
+    postsContainer.appendChild(postCard);
   });
 };

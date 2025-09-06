@@ -4,11 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API</title>
+    <style>
+      #post-container {
+        max-width: 1160px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+      }
+
+      .post-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .post-card h2 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+      }
+
+      .post-card p {
+        font-size: 1em;
+        color: #555;
+        text-align: justify;
+      }
+    </style>
   </head>
   <body>
     <button id="loadDataButton">Load Data</button>
     <button id="btn-load-post">Load Post</button>
-    <ul id="post-container"></ul>
+    <div id="post-container">
+      <div class="post-card">
+        <h2>This is a sample Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quam?</p>
+      </div>
+    </div>
     <script src="/scripts.js"></script>
   </body>
 </html>
