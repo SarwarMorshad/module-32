@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/364257c701.js" crossorigin="anonymous"></script>
+    <title>Todo</title>
+    <style>
+      #todo-container {
+        max-width: 1160px;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* grid-gap: 16px; */
+      }
+
+      .todo-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* height: 100%; */
+        margin: 10px;
+        height: 150px;
+        width: 300px;
+      }
+
+      .todo-card h2 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+      }
+
+      .todo-card p {
+        font-size: 1em;
+        color: #555;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Todo List</h1>
+    <div id="todo-container">
+      <!-- <div class="todo-card">
+        <h3>This is a todo title</h3>
+        <p>User ID: 1</p>
+      </div> -->
+    </div>
+    <script src="/todo.js"></script>
+  </body>
+</html>

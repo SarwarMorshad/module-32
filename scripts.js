@@ -16,15 +16,11 @@ document.getElementById("btn-load-post").addEventListener("click", function () {
     .then((data) => displayPost(data));
 });
 
-// const displayPost = (posts) => {
-//   const postsContainer = document.getElementById("post-container");
-//   postsContainer.innerHTML = ""; // Clear previous posts
-//   posts.forEach((post) => {
-//     const li = document.createElement("li");
-//     li.textContent = post.title;
-//     postsContainer.appendChild(li);
-//   });
-// };
+function loadPost() {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => res.json())
+    .then((data) => displayPost(data));
+}
 
 const displayPost = (posts) => {
   const postsContainer = document.getElementById("post-container");
@@ -38,3 +34,4 @@ const displayPost = (posts) => {
     postsContainer.appendChild(postCard);
   });
 };
+// loadPost();
